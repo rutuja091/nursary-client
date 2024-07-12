@@ -8,7 +8,7 @@ function Home() {
 
     const loadPlants = async () => {
       toast.loading("Loading Plants...")
-        const response = await axios.get("https://nursary-server.onrender.com")
+        const response = await axios.get("http://localhost:8000/plants")
 
         toast.dismiss()
 
@@ -29,7 +29,6 @@ function Home() {
       {
         plants.map((plant,i)=>{
             const {
-                 
                 _id,
                 name,
                 category,
