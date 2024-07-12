@@ -8,7 +8,7 @@ function Home() {
 
     const loadPlants = async () => {
       toast.loading("Loading Plants...")
-        const response = await axios.get("https://nursary-server.onrender.com/plants")
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/plants`)
 
         toast.dismiss()
 
