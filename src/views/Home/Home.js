@@ -29,6 +29,7 @@ function Home() {
       {
         plants.map((plant,i)=>{
             const {
+                 i,
                 _id,
                 name,
                 category,
