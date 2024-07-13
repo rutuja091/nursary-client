@@ -47,6 +47,7 @@ function AddPlant() {
       <h1>Add Nursery Plant</h1>
       </div>
      <div className="form-group">
+     <label for="name">Name:</label>
         <input
           type='text'
           placeholder='Enter Plant Name'
@@ -57,6 +58,7 @@ function AddPlant() {
         </div>
 
         <div className="form-group">
+        <label for="category">Category:</label>
         <input
           type='text'
           placeholder='Enter Plant Category'
@@ -68,6 +70,7 @@ function AddPlant() {
 
 
          <div className="form-group">
+         <label for="description">Price:</label>
         <input
           type='number'
           placeholder='Enter Plant Price'
@@ -78,11 +81,13 @@ function AddPlant() {
         </div>
 
         <div className="form-group">
+        <label for="image">Image Preview</label>
         <img src={image} className='img-preview' />
         </div>
 
 
         <div className="form-group">
+        <label for="image">Image:</label>
         <input
           type='text'
           placeholder='Enter Plant Image URL'
@@ -93,6 +98,7 @@ function AddPlant() {
         </div>
 
         <div className="form-group">
+        <label for="description">Description:</label>
         <input
           type='text'
           placeholder='Enter Plant Description'

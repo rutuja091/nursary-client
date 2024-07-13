@@ -108,6 +108,7 @@ if(!id){
          </div>
 
          <div className="form-group">
+         <label for="image">Image Preview</label>
         <img src={image} className='img-preview' />
         </div>
 
