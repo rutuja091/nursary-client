@@ -28,7 +28,10 @@ function Home() {
 
   return ( 
     <div>
-      <h1>Plants </h1>
+      <div className='form-heading'>
+      <h1>Nursery Plant Management </h1>
+      </div>
+     
       {
         plants.map((plant,i)=>{
             const {

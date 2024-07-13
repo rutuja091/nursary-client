@@ -66,10 +66,15 @@ if(!id){
 
   return (
     <div>
-      <h1>Update Plant:{id}</h1>
+     
 
       <form>
+      <div className="form-heading">
+      <h1>Update Plant</h1>
+       </div>
 
+      <div className="form-group">
+      <label for="name">Name:</label>
         <input
           type='text'
           placeholder='Enter Plant Name'
@@ -77,8 +82,10 @@ if(!id){
           onChange={(e) => setName(e.target.value)}
           className='plant-input'
         />
+        </div>
 
-
+        <div className="form-group">
+        <label for="category">Category:</label>
         <input
           type='text'
           placeholder='Enter Plant Category'
@@ -86,7 +93,11 @@ if(!id){
           onChange={(e) => setCategory(e.target.value)}
           className='plant-input'
         />
+        </div>
 
+
+         <div className="form-group">
+         <label for="description">Price:</label>
         <input
           type='number'
           placeholder='Enter Plant Price'
@@ -94,7 +105,14 @@ if(!id){
           onChange={(e) => setPrice(e.target.value)}
           className='plant-input'
         />
+         </div>
+
+         <div className="form-group">
         <img src={image} className='img-preview' />
+        </div>
+
+        <div className="form-group">
+        <label for="image">Image:</label>
         <input
           type='text'
           placeholder='Enter Plant Image URL'
@@ -102,7 +120,9 @@ if(!id){
           onChange={(e) => setImage(e.target.value)}
           className='plant-input'
         />
-
+        </div>
+         <div className="form-group">
+         <label for="description">Description:</label>
         <input
           type='text'
           placeholder='Enter Plant Description'
@@ -110,17 +130,19 @@ if(!id){
           onChange={(e) => setDescription(e.target.value)}
           className='plant-input'
         />
+        </div>
 
 
 
 
 
         <button type="button" onClick={updatePlant}>Update Plant</button>
+        <Link to="/" className='show-all-button'>Show All Plants</Link>
       </form>
       <br/>
       <br/>
       
-      <Link to="/">Show All Plants</Link>
+
       <Toaster/>
     </div>
   )

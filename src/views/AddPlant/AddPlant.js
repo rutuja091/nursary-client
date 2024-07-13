@@ -39,10 +39,14 @@ function AddPlant() {
   }
 
   return (
-    <div>
-      <h1>Add Plant</h1>
+    <>
+    { <div>
+  
       <form>
-
+      <div className="form-heading">
+      <h1>Add Nursery Plant</h1>
+      </div>
+     <div className="form-group">
         <input
           type='text'
           placeholder='Enter Plant Name'
@@ -50,8 +54,9 @@ function AddPlant() {
           onChange={(e) => setName(e.target.value)}
           className='plant-input'
         />
+        </div>
 
-
+        <div className="form-group">
         <input
           type='text'
           placeholder='Enter Plant Category'
@@ -59,15 +64,25 @@ function AddPlant() {
           onChange={(e) => setCategory(e.target.value)}
           className='plant-input'
         />
+         </div>
 
+
+         <div className="form-group">
         <input
           type='number'
           placeholder='Enter Plant Price'
           value={price}
           onChange={(e) => setPrice(e.target.value)}
-          className='plant-input'
+          className='plant-input '
         />
+        </div>
+
+        <div className="form-group">
         <img src={image} className='img-preview' />
+        </div>
+
+
+        <div className="form-group">
         <input
           type='text'
           placeholder='Enter Plant Image URL'
@@ -75,7 +90,9 @@ function AddPlant() {
           onChange={(e) => setImage(e.target.value)}
           className='plant-input'
         />
+        </div>
 
+        <div className="form-group">
         <input
           type='text'
           placeholder='Enter Plant Description'
@@ -83,19 +100,67 @@ function AddPlant() {
           onChange={(e) => setDescription(e.target.value)}
           className='plant-input'
         />
+        </div>
 
 
 
 
 
         <button type="button" onClick={addPlant}>Add Plant</button>
+        <Link to="/" className='show-all-button'>Show All Plants</Link>
       </form>
       <br />
       <br />
-
-      <Link to="/">Show All Plants</Link>
+       
+     
+      
       <Toaster />
-    </div>
+    </div> }
+
+
+ 
+     {/* <form>
+        <div class="form-group">
+
+            <label for="name">Name:</label>
+            <input type="text"
+          required/>
+
+        </div>
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="">Select a category</option>
+                <option value="flowers">Flowers</option>
+                <option value="shrubs">Shrubs</option>
+                <option value="trees">Trees</option>
+                <option value="seeds">Seeds</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required/>
+        </div>
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" step="0.01" required/>
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+        </div>
+        <button type="submit">Add Plant</button>
+        <a href="/all-plants" class="show-all-button">Show All Plants</a>
+    </form> */}
+
+
+
+
+
+
+
+
+    </>
   )
 }
 
