@@ -28,9 +28,25 @@ function Home() {
 
   return ( 
     <div>
-      <div className='form-heading'>
-      <h1>Nursery Plant Management </h1>
+      <div className='form-heading-cont'>
+
+      <div className='form-heading' >Nursery Plant Management </div>
+      <Link
+        className='button-add add-button'
+        
+        to={`/add`}>
+        Add New Plant
+        
+      </Link>
+
+       {/* <Link to="/add">
+      <img src={ImgAdd}className='add-btn'/>
+      </Link>  */}
+
       </div>
+
+
+
      
       {
         plants.map((plant,i)=>{
@@ -59,9 +75,7 @@ function Home() {
     
       }
       <Toaster/>
-      <Link to="/add">
-      <img src={ImgAdd}className='add-btn'/>
-      </Link>
+    
     </div>
   )
 }

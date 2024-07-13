@@ -16,7 +16,12 @@ function PlantCard({ _id, name, category, image, price, description, loadPlants 
   }
 
   return (
-    <div class="container">
+
+  
+
+
+
+    <div className="container">
 
     <div className='plant-card'>
         <img src={image} className='plant-image' />
